@@ -1,0 +1,12 @@
+@font-face {
+    font-family: WindowsXP;
+    src: url("/static/resources/fonts/windows-xp-tahoma.TTF");
+}
+
+@mixin main-font {
+    font-family: Verdana;
+}
+
+@mixin old-font {
+    font-family: WindowsXP;
+}

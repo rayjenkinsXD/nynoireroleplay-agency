@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SharkWeb | Обозреватель</title>
+        <link rel="stylesheet" href="/static/styles/style.css">
+    </head>
+    <body>
+        <div class="main-layout">
+            <header class="main-header">
+                <img src="/static/resources/banner.png" draggable="false">
+            </header>
+            <nav class="main-navigation">
+                <div class="links">
+                    <a href="/home" class="link active">Новости</a>
+                    <a href="/observer" class="link">Обозреватель</a>
+                    <a href="/editor" class="link">Редактор</a>
+                    <a href="#" class="link">Руководство</a>
+                </div>
+            </nav>
+            <main class="main-separate-container">
+                <aside class="main-aside">
+                    <section>
+                        <header>
+                            Личный кабинет
+                        </header>
+                        <img src="/static/resources/personwithoutpicture.png" draggable="false">
+                        <div class="image-caption">
+                            <img src="/static/resources/medal.png" draggable="false">
+                            <div>RayJenkins_04</div>
+                            <a href="#" class="win95-link">Выйти</a>
+                        </div>
+                    </section>
+                    <section>
+                        <header>
+                            Версия базы данных
+                        </header>
+                        <div class="centered-text">
+                            1.0.0 Pre-alpha (stable)
+                        </div>
+                    </section>
+                    <section>
+                        <header>
+                            Статистика
+                        </header>
+                        <table class="statictis-table">
+                            <tr>
+                                <td>Написанных досье</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>Организаций</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Автомобилей</td>
+                                <td>16</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <header>.onion форум</header>
+                        <div class="centered-text">
+                            <a href="#" class="link">https://discord.gg/Grcjg4gp</a>
+                        </div>
+                        <img src="/static/resources/rotatingdisk.gif" class="gif-under-section">
+                    </section>
+                </aside>
+                <div class="main-content">
+                    <h1>Досье</h1>
+                    <div class="dossier">
+                        <div class="dossier-content">
+                            <!-- ОСНОВНАЯ ТАБЛИЧНАЯ ИНФОРМАЦИЯ -->
+                            <h2>Основная информация</h2>
+                            <hr>
+                            <div class="basic-info-table">
+                                <div>
+                                    <span>Имя & фамилия</span>
+                                    <span>Номер паспорта</span>
+                                    <span>Занесен в базу</span>
+                                    <span>Пол</span>
+                                    <span>Раса</span>
+                                </div>
+                                <div>
+                                    <span>{{ fullname }}</span>
+                                    <span>{{ passport }}</span>
+                                    <span>{{ publishDate }}</span>
+                                    <span>{{ sex }}</span>
+                                    <span>{{ race }}</span>
+                                </div>
+                            </div>
+                            <a href="#" class="dossier-publish win95-link" draggable="false">Создать публичную ссылку</a>
+                            
+                            <!-- КРАТКАЯ БИОГРАФИЯ -->
+                            <h2>Краткая биография</h2>
+                            <hr>
+                            {{#if bio }}
+                            {{ bio }}
+                            {{ else }}
+                            Биография отсутствует.
+                            {{/if}}
+
+                            <!-- НОМЕРА ТЕЛЕФОНОВ -->
+                            <h2>Известные номера телефонов</h2>
+                            <hr>
+                            {{#if phoneNumbers}}
+                                <ul class="list-table">
+                                    {{#each phoneNumbers}}
+                                        <li>{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                            {{else}}
+                                Номерная книжка отсутствует.
+                            {{/if}}
+
+                            <!-- АВТОМОБИЛИ -->
+                            <h2>Зарегистрированные автомобили</h2>
+                            <hr>
+                            {{#if vehicles}}
+                                <ul class="list-table">
+                                    {{#each vehicles}}
+                                        <li>
+                                            <div>
+                                                {{this.model}}<br>
+                                                <b>Номер:</b> {{this.number}}<br>
+                                                <b>Цвет:</b> {{this.color}}
+                                            </div>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{else}}
+                                Записи об автомобилях отсутствуют.
+                            {{/if}}
+
+                            <!-- ЗАМЕТКИ -->
+                            <h2>Заметки</h2>
+                            <hr>
+                            <form class="note-publish">
+                                <textarea class="win95-textarea" placeholder="Напишите заметку к досье..."></textarea>
+                                <button class="win95-button">Опубликовать</button>
+                            </form>
+                            <div class="dossier-notes">
+                                {{#each notes}}
+                                    <section class="note">
+                                        <div class="author">
+                                            <img src="/static/resources/male1.png" class="author-picture" draggable="false">
+                                            <div class="author-nickname">{{this.editor}}</div>
+                                            <time class="publish-date">{{this.date}}</time>
+                                        </div>
+                                        <div class="note-content">{{this.text}}</div>
+                                    </section>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="dossier-aside">
+                            <img src="/static/resources/personwithoutpicture.png" class="photo" draggable="false">
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

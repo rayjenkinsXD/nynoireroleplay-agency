@@ -1,0 +1,32 @@
+{
+    "general": [
+        "82 Hatchback",
+        "90 Ford 150",
+        "2001 Blazer",
+        "98 Corolla",
+        "95 Buick",
+        "90 Chevrolet",
+        "90 Ford 250",
+        "79 Ford (4x4)",
+        "2004 Victoria",
+        "78 Ford",
+        "98 Cherokee",
+        "84 Fleetwood",
+        "69 Roadrunner",
+        "2004 Ram",
+        "69 Charger"
+    ],
+    "premium": [
+        "90 Mazda Savana",
+        "92 Toyota Soarer",
+        "83 Mazda Savanna RX-7",
+        "98 Toyota Chaser",
+        "2003 Mazda RX-8",
+        "67 Mazda Cosmo",
+        "2000 Toyota Aristo",
+        "90 Toyota Supra",
+        "2001 Mazda RX-7",
+        "93 Toyota Supra",
+        "HMMWV Conversion"
+    ]
+}

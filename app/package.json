@@ -1,0 +1,28 @@
+{
+  "name": "agency",
+  "version": "0.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayjenkinsXD/nynoireroleplay-agency.git"
+  },
+  "author": "@jenkinsNET (Telegram)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/rayjenkinsXD/nynoireroleplay-agency/issues"
+  },
+  "homepage": "https://github.com/rayjenkinsXD/nynoireroleplay-agency#readme",
+  "description": "",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "express": "^4.21.2",
+    "hbs": "^4.2.0",
+    "mjs": "^1.0.0",
+    "mysql2": "^3.12.0",
+    "nodemon": "^3.1.9"
+  }
+}

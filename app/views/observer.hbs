@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SharkWeb | Обозреватель</title>
+        <link rel="stylesheet" href="/static/styles/style.css">
+    </head>
+    <body>
+        <div class="main-layout">
+            <header class="main-header">
+                <img src="/static/resources/banner.png">
+            </header>
+            <nav class="main-navigation">
+                <div class="links">
+                    <a href="/home" class="link active">Новости</a>
+                    <a href="/observer" class="link">Обозреватель</a>
+                    <a href="/editor" class="link">Редактор</a>
+                    <a href="#" class="link">Руководство</a>
+                </div>
+            </nav>
+            <main class="main-separate-container">
+                <aside class="main-aside">
+                    <section>
+                        <header>
+                            Личный кабинет
+                        </header>
+                        <img src="/static/resources/personwithoutpicture.png" draggable="false">
+                        <div class="image-caption">
+                            <img src="/static/resources/medal.png" draggable="false">
+                            <div>RayJenkins_04</div>
+                            <a href="#" class="win95-link">Выйти</a>
+                        </div>
+                    </section>
+                    <section>
+                        <header>
+                            Версия базы данных
+                        </header>
+                        <div class="centered-text">
+                            1.0.0 Pre-alpha (stable)
+                        </div>
+                    </section>
+                    <section>
+                        <header>
+                            Статистика
+                        </header>
+                        <table class="statictis-table">
+                            <tr>
+                                <td>Написанных досье</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>Организаций</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Автомобилей</td>
+                                <td>16</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <header>.onion форум</header>
+                        <div class="centered-text">
+                            <a href="#" class="link">https://discord.gg/Grcjg4gp</a>
+                        </div>
+                        <img src="/static/resources/rotatingdisk.gif" class="gif-under-section">
+                    </section>
+                </aside>
+                <div class="main-content">
+                    <h1>Обозреватель</h1>
+                    <form class="filters-layout">
+                        <div class="categories">
+                            <section class="win95-panel filter-categories">
+                                <a href="#" class="win95-button" draggable="false">Досье</a>
+                                <a href="#" class="win95-button" draggable="false">Автомобильные номера</a>
+                                <a href="#" class="win95-button" draggable="false">Организации</a>
+                            </section>
+                            <a href="#" class="win95-button" draggable="false">Запустить поиск</a>
+                        </div>
+                        
+                        <!-- ФИЛЬТРЫ "ДОСЬЕ" -->
+                        <section class="win95-panel filters disable">
+                            <div class="win95-input">
+                                <span>Имя</span>
+                                <input type="text" placeholder="John">
+                            </div>
+                            <div class="win95-input">
+                                <span>Фамилия</span>
+                                <input type="text" placeholder="Smith">
+                            </div>
+                            <div class="win95-input">
+                                <span>Раса</span>
+                                <select>
+                                    <option>Не указана</option>
+                                    <option value="europian">Европеоидная</option>
+                                    <option value="nigger">Негроидная</option>
+                                    <option value="asian">Монголоидная</option>
+                                </select>
+                            </div>
+                            <div class="win95-input">
+                                <span>Пол</span>
+                                <div class="radio-buttons">
+                                    <div>
+                                        <input type="radio" name="race">
+                                        <span>Мужской</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="race">
+                                        <span>Женский</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="win95-input filter-organization">
+                                <span>Организация</span>
+                                <select>
+                                    <!-- Список организаций из базы данных -->
+                                    <option>Не указана</option>
+                                </select>
+                            </div>
+                            <div class="win95-input filter-organization">
+                                <span>Номер паспорта</span>
+                                <input type="text" placeholder="0000000000" maxlength="10">
+                            </div>
+                            <div class="win95-input start-date">
+                                <span>Тэги</span>
+                                <select disabled>
+                                    <option>Выберите тэг</option>
+                                    <option>Диллер</option>
+                                    <option>Киллер</option>
+                                    <option>Полицейский</option>
+                                    <option>Бизнесмен</option>
+                                </select>
+                            </div>
+                            <div class="win95-input start-date">
+                                <span>Начало регистрации</span>
+                                <input type="date">
+                            </div>
+                            <div class="win95-input end-date">
+                                <span>Конец регистрации</span>
+                                <input type="date">
+                            </div>
+                        </section>
+                        
+                        <!-- ФИЛЬТРЫ "АВТОМОБИЛЬНЫЕ НОМЕРА" -->
+                        <section class="win95-panel filters">
+                            <div class="win95-input">
+                                <span>Модель</span>
+                                <select>
+                                    <option>Не указана</option>
+                                </select>
+                            </div>
+                            <div class="win95-input">
+                                <span>Номер</span>
+                                <input type="text" placeholder="Smith">
+                            </div>
+                            <div class="win95-input">
+                                <span>Владелец</span>
+                                <select>
+                                    <option>Не указана</option>
+                                </select>
+                            </div>
+                            <div class="win95-input filter-organization">
+                                <span>Организация</span>
+                                <select>
+                                    <!-- Список организаций из базы данных -->
+                                    <option>Не указана</option>
+                                </select>
+                            </div>
+                            <div class="win95-input start-date">
+                                <span>Начало регистрации</span>
+                                <input type="date">
+                            </div>
+                            <div class="win95-input end-date">
+                                <span>Конец регистрации</span>
+                                <input type="date">
+                            </div>
+                        </section>
+                    </form>
+                    <div class="preview-cards-layout">
+                        {{#each dossiers}}
+                            <article class="preview-card news">
+                                <header>
+                                    <h2><a href="/dossier/{{this.id}}">{{this.fullname}}</a></h2>
+                                    <time datetime="">{{this.publishDate}}</time>
+                                </header>
+                                <div class="content with-image">
+                                    <div class="image">
+                                        {{! TODO: Добавить шаблонизацию приложенной к досье фотографии }}
+                                        <img src="/static/resources/personwithoutpicture.png" draggable="false">
+                                        <span></span>
+                                    </div>
+                                    <div>
+                                        {{this.bio}}
+                                    </div>
+                                </div>
+                            </article>
+                        {{/each}}
+                        <!-- <article class="preview-card news">
+                            <header>
+                                <h2>Name & Surname</h2>
+                                <time datetime="">11 Nov, 2024</time>
+                            </header>
+                            <div class="content">
+                                <div>
+                                    <span>Владелец</span>
+                                    <span>Модель</span>
+                                    <span>Номер</span>
+                                    <span>Цвет</span>
+                                </div>
+                            </div>
+                        </article> -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

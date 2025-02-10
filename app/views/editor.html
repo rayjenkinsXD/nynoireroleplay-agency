@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SharkWeb | Обозреватель</title>
+        <link rel="stylesheet" href="/static/styles/style.css">
+    </head>
+    <body>
+        <div class="main-layout">
+            <header class="main-header">
+                <img src="/static/resources/banner.png" draggable="false">
+            </header>
+            <nav class="main-navigation">
+                <div class="links">
+                    <a href="/home" class="link active">Новости</a>
+                    <a href="/observer" class="link">Обозреватель</a>
+                    <a href="/editor" class="link">Редактор</a>
+                    <a href="#" class="link">Руководство</a>
+                </div>
+            </nav>
+            <main class="main-separate-container">
+                <aside class="main-aside">
+                    <section>
+                        <header>
+                            Личный кабинет
+                        </header>
+                        <img src="/static/resources/personwithoutpicture.png" draggable="false">
+                        <div class="image-caption">
+                            <img src="/static/resources/medal.png" draggable="false">
+                            <div>RayJenkins_04</div>
+                            <a href="#" class="win95-link">Выйти</a>
+                        </div>
+                    </section>
+                    <section>
+                        <header>
+                            Версия базы данных
+                        </header>
+                        <div class="centered-text">
+                            1.0.0 Pre-alpha (stable)
+                        </div>
+                    </section>
+                    <section>
+                        <header>
+                            Статистика
+                        </header>
+                        <table class="statictis-table">
+                            <tr>
+                                <td>Написанных досье</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>Организаций</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Автомобилей</td>
+                                <td>16</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <header>.onion форум</header>
+                        <div class="centered-text">
+                            <a href="#" class="link">https://discord.gg/Grcjg4gp</a>
+                        </div>
+                        <img src="/static/resources/rotatingdisk.gif" class="gif-under-section">
+                    </section>
+                </aside>
+                <div class="main-content">
+                    <h1>Редактор</h1>
+                    <div class="editor-tabs">
+                        <button class="win95-button">Досье</button>
+                        <button class="win95-button">Транспорт</button>
+                    </div>
+
+                    <!-- Редактор досье -->
+                    <form class="editor">
+                        <div class="win95-panel">
+                            <div class="win95-input">
+                                <span>Имя</span>
+                                <input type="text" placeholder="John">
+                            </div>
+                            <div class="win95-input">
+                                <span>Фамилия</span>
+                                <input type="text" placeholder="Smith">
+                            </div>
+                            <div class="win95-input">
+                                <span>Раса</span>
+                                <select>
+                                    <option>Не указана</option>
+                                    <option value="europian">Европеоидная</option>
+                                    <option value="nigger">Негроидная</option>
+                                    <option value="asian">Монголоидная</option>
+                                </select>
+                            </div>
+                            <div class="win95-input">
+                                <span>Пол</span>
+                                <div class="radio-buttons">
+                                    <div>
+                                        <input type="radio" name="race">
+                                        <span>Мужской</span>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="race">
+                                        <span>Женский</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="win95-input filter-organization">
+                                <span>Организация</span>
+                                <select>
+                                    <!-- Список организаций из базы данных -->
+                                    <option>Не указана</option>
+                                </select>
+                            </div>
+                            <div class="win95-input filter-organization">
+                                <span>Номер паспорта</span>
+                                <input type="text" placeholder="0000000000" maxlength="10">
+                            </div>
+                            <div class="win95-input filter-organization">
+                                <span>Номер телефона</span>
+                                <input type="text" placeholder="00-00-000" maxlength="7">
+                            </div>
+                            <div class="win95-input start-date">
+                                <span>Тэги</span>
+                                <select disabled>
+                                    <option>Выберите тэг</option>
+                                    <option>Диллер</option>
+                                    <option>Киллер</option>
+                                    <option>Полицейский</option>
+                                    <option>Бизнесмен</option>
+                                </select>
+                            </div>
+                            <div class="editor-bio win95-input">
+                                <span>Биография</span>
+                                <textarea class="win95-textarea" rows="10"></textarea>
+                            </div>
+                            <div class="editor-cars">
+                                <h2>Транспорт</h2>
+                                <hr>
+                                <div class="car-adding">
+                                    <div class="win95-input">
+                                        <span>Модель</span>
+                                        <select>
+                                            <option>Не указана</option>
+                                        </select>
+                                    </div>
+                                    <div class="win95-input">
+                                        <span>Номер</span>
+                                        <input type="text">
+                                    </div>
+                                    <div>
+                                        <div class="win95-input">
+                                            <span>Цвет</span>
+                                            <input type="color">
+                                        </div>
+                                        <div class="win95-input">
+                                            <span>Название цвета</span>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="win95-button">
+                            Опубликовать
+                        </button>
+                    </form>
+                    </div>
+            </main>
+        </div>
+    </body>
+</html>

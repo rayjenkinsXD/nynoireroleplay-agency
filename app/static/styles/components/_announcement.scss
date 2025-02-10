@@ -1,0 +1,27 @@
+@use "./variables" as vars;
+@use "./fonts" as fonts;
+
+section.announcement {
+    display: flex;
+    position: relative;
+    gap: 8px;
+    border: 8px double black;
+    padding: 12px;
+
+    div.content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        h2.title {
+            font-family: Georgia;
+            font-style: italic;
+            font-size: 32px;
+        }
+
+        div.text {
+            font-size: 16px;
+            @include fonts.main-font;
+        }
+    }
+}

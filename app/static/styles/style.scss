@@ -1,0 +1,88 @@
+// Load utilities
+@use "reset.css";
+@use "components/variables" as vars;
+@use "components/fonts";
+
+// Load components
+@use "components/header";
+@use "components/win95Styles.scss";
+@use "components/aside";
+@use "components/announcement";
+@use "components/preview-cards";
+@use "components/searchfilters";
+@use "components/longread";
+@use "components/dossier";
+@use "components/editor";
+@use "components/login";
+
+* {
+    box-sizing: border-box;
+
+    &::selection {
+        background-color: blue;
+        color: white;
+    }
+}
+
+body {
+    background-color: vars.$bg-white;
+}
+
+.main-layout {
+    height: 100vh;
+    max-width: vars.$layout-width;
+    width: 100%;
+    margin: auto;
+    padding: 0 8px;
+    padding-top: 8px;
+
+    @include fonts.main-font;
+}
+
+.main-header {
+    margin-bottom: 8px;
+}
+
+main.main-separate-container {
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    margin-top: 24px;
+}
+
+div.main-content {
+    flex-grow: 1;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h1 {
+        font-family: Verdana;
+        font-weight: bold;
+        font-size: 32px;
+    }
+}
+
+div.preview-cards-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 16px;
+}
+
+.filters-layout {
+    display: flex;
+    gap: 30px;
+
+    .categories {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+.disable {
+    display: none;
+}

@@ -1,0 +1,73 @@
+@use "./variables" as vars;
+@use "./fonts" as fonts;
+
+aside.main-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 282px;
+    flex-shrink: 0;
+    
+    @include fonts.old-font;
+    font-size: 22px;
+
+    user-select: none;
+    
+    section {
+      img.gif-under-section {
+        width: 100%;
+        margin-top: -14px;
+      }
+      
+      header {
+        display: flex;
+        height: 32px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        margin-bottom: 8px;
+        
+        background: #030099;
+        box-shadow: inset 0 2px 16px rgba(0, 0, 0, 0.5);
+        
+        + img {
+          width: 100%;
+          margin-top: -8px;
+          
+          + div.image-caption {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            
+            a {
+              display: block;
+              margin-left: auto;
+            }
+          }
+        }
+        
+        + table.statictis-table {
+          margin-top: -8px;
+          table-layout: fixed;
+          width: 100%;
+          border-collapse: collapse;
+          border: 2px solid black;
+          
+          tr {
+            border: 1px solid black;
+            padding: 8px;
+            display: flex;
+            
+            td:nth-child(1) {
+              width: 80%;
+            }
+          }
+        }
+      }
+      
+      div.centered-text {
+        text-align: center;
+      }
+    }
+  }
